@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hello Nepal Business Hub - Printing, photocopy, lamination, binding, stamp, photo, computer and electric products." />
+  <title>Hello Nepal Business Hub | Banepa</title>
+  <style>
+    :root{
+      --bg:#08111f; --card:#101c2e; --card2:#0c1728; --text:#eef5ff;
+      --muted:#a9b8cc; --primary:#21c47b; --accent:#38bdf8;
+      --line:rgba(255,255,255,.09); --shadow:0 18px 50px rgba(0,0,0,.28);
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans Devanagari",Arial,sans-serif;background:linear-gradient(180deg,#07111e 0%,#0a1422 48%,#07101c 100%);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(7,17,30,.84);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800}
+    .logo{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));color:#04111b;font-weight:900}
+    .brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:.08em}
+    .brand span{font-size:18px}
+    .links{display:flex;gap:22px;color:#cfe0f4;font-size:14px}
+    .links a:hover{color:#fff}
+    .cta{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:12px;background:var(--primary);color:#03120c;font-weight:800}
+    .hero{padding:84px 0 54px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:center}
+    .pill{display:inline-block;padding:7px 12px;border:1px solid rgba(56,189,248,.28);background:rgba(56,189,248,.08);border-radius:999px;color:#bfeaff;font-size:12px;font-weight:700}
+    h1{font-size:clamp(38px,5vw,64px);line-height:1.05;margin:18px 0}
+    .hero h1 span{color:var(--primary)}
+    .lead{font-size:18px;color:var(--muted);max-width:680px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn2{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.035);font-weight:750}
+    .btn2:hover{background:rgba(255,255,255,.07)}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow)}
+    .hero-card h3{margin-top:0}
+    .mini{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+    .mini div{padding:16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}
+    .mini b{display:block;font-size:21px;color:#fff}
+    .mini span{color:var(--muted);font-size:12px}
+    section{padding:70px 0}
+    .section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:26px}
+    .section-head h2{margin:0;font-size:32px}
+    .section-head p{margin:0;color:var(--muted);max-width:650px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+    .icon{font-size:28px}
+    .card h3{margin:12px 0 6px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .rate-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .rate{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 18px;background:var(--card2);border:1px solid var(--line);border-radius:14px}
+    .rate span{color:#dbe7f7}
+    .rate b{color:var(--primary);white-space:nowrap}
+    .products{grid-template-columns:repeat(4,1fr)}
+    .product{min-height:170px}
+    .tag{display:inline-block;font-size:11px;padding:5px 9px;border-radius:999px;background:rgba(33,196,123,.10);color:#9df0c6}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .contactbox{padding:24px;background:var(--card);border:1px solid var(--line);border-radius:22px}
+    .contact-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+    .contact-row:last-child{border-bottom:0}
+    .contact-row strong{display:block}
+    .contact-row span{color:var(--muted);font-size:14px}
+    .mapbox{min-height:330px;display:grid;place-items:center;text-align:center;border-radius:18px;border:1px dashed rgba(255,255,255,.16);background:linear-gradient(135deg,rgba(56,189,248,.07),rgba(33,196,123,.05))}
+    footer{border-top:1px solid var(--line);padding:26px 0 36px;color:var(--muted);font-size:13px}
+    .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    @media (max-width:900px){
+      .hero-grid,.contact{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .products{grid-template-columns:repeat(2,1fr)}
+      .links{display:none}
+    }
+    @media (max-width:620px){
+      .navin{height:64px}.brand span{font-size:15px}
+      .hero{padding-top:58px}
+      .grid,.rate-list,.products{grid-template-columns:1fr}
+      section{padding:55px 0}
+      .section-head{display:block}.section-head h2{margin-bottom:8px}
+      h1{font-size:42px}
+      .lead{font-size:16px}
+      .actions>*{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container navin">
+      <a class="brand" href="#home">
+        <div class="logo">HN</div>
+        <div><span>Hello Nepal Business Hub</span><small>BANEPA • ONE-STOP BUSINESS SERVICE</small></div>
+      </a>
+      <div class="links">
+        <a href="#services">Services</a>
+        <a href="#rates">Rates</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="cta" href="https://wa.me/9779802414955" target="_blank">WhatsApp</a>
+    </div>
+  </nav>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="pill">विश्वसनीय • छिटो • सजिलो</span>
+          <h1>तपाईंको दैनिक कामको <span>एकै ठाउँ</span> समाधान</h1>
+          <p class="lead">
+            Hello Nepal Business Hub मा printing, photocopy, lamination, binding, stamp,
+            passport photo, computer सम्बन्धी काम तथा उपयोगी electric / digital products उपलब्ध छन्।
+          </p>
+          <div class="actions">
+            <a class="cta" href="https://wa.me/9779802414955?text=Namaste%20Hello%20Nepal%20Business%20Hub%2C%20malai%20service%20ko%20barema%20jankari%20chahiyo." target="_blank">WhatsApp मा सम्पर्क</a>
+            <a class="btn2" href="#rates">रेट हेर्नुहोस्</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>आज नै सेवा लिनुहोस्</h3>
+          <p style="color:var(--muted)">छिटो काम, स्पष्ट रेट र सहज सम्पर्क।</p>
+          <div class="mini">
+            <div><b>7 AM–7 PM</b><span>Sunday–Friday</span></div>
+            <div><b>Banepa</b><span>Store Location</span></div>
+            <div><b>WhatsApp</b><span>9802414955</span></div>
+            <div><b>Fast</b><span>Service & Printing</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>हाम्रा मुख्य सेवाहरू</h2></div>
+          <p>व्यक्तिगत, विद्यार्थी, अफिस र साना व्यवसायका लागि आवश्यक दैनिक सेवाहरू एकै ठाउँमा।</p>
+        </div>
+        <div class="grid">
+          <div class="card"><div class="icon">🖨️</div><h3>Printing & Photocopy</h3><p>Black & white print, photocopy तथा आवश्यक document printing.</p></div>
+          <div class="card"><div class="icon">📚</div><h3>Binding & Lamination</h3><p>Report, project, certificate र अन्य कागजातका लागि finishing service.</p></div>
+          <div class="card"><div class="icon">📸</div><h3>Passport Photo</h3><p>छिटो passport-size photo तथा आवश्यक photo-related service.</p></div>
+          <div class="card"><div class="icon">🔖</div><h3>Stamp & Forms</h3><p>Stamp र विभिन्न form/document सम्बन्धी सेवा.</p></div>
+          <div class="card"><div class="icon">💻</div><h3>Computer Service</h3><p>Computer-related काम, typing, document preparation तथा सहायता.</p></div>
+          <div class="card"><div class="icon">⚡</div><h3>Electric / Digital Products</h3><p>Charger, cable, torch, speaker, pen drive लगायतका उपयोगी सामान.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rates">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Popular Rate List</h2></div>
+          <p>वेबसाइटमा राखिएको rate list परिवर्तन गर्न चाहनु भए तलको HTML सजिलै edit गर्न सकिन्छ।</p>
+        </div>
+        <div class="rate-list">
+          <div class="rate"><span>Print</span><b>Rs. 2</b></div>
+          <div class="rate"><span>WhatsApp Print</span><b>Rs. 5</b></div>
+          <div class="rate"><span>Binding</span><b>Rs. 20</b></div>
+          <div class="rate"><span>Lamination</span><b>Rs. 20</b></div>
+          <div class="rate"><span>High Quality Banner</span><b>Rs. 35</b></div>
+          <div class="rate"><span>Stamp</span><b>Rs. 300</b></div>
+          <div class="rate"><span>Passport Photo — Urgent</span><b>Rs. 150</b></div>
+          <div class="rate"><span>Police Report Form</span><b>Rs. 300</b></div>
+          <div class="rate"><span>Frame</span><b>Rs. 150+</b></div>
+          <div class="rate"><span>Standard Frame</span><b>Rs. 250</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>उपलब्ध उत्पादन</h2></div>
+          <p>दैनिक प्रयोगका useful computer, electric र digital accessories।</p>
+        </div>
+        <div class="grid products">
+          <div class="card product"><span class="tag">Popular</span><h3>Pen Drive</h3><p>Wholesale price available.</p></div>
+          <div class="card product"><span class="tag">Branded</span><h3>Chargers</h3><p>Mobile / digital device charging accessories.</p></div>
+          <div class="card product"><span class="tag">Value</span><h3>Earphones</h3><p>Budget-friendly options.</p></div>
+          <div class="card product"><span class="tag">Utility</span><h3>Torch & Cables</h3><p>Branded and useful everyday items.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Hello Nepal Business Hub</h2></div>
+          <p>स्थानीय ग्राहकका लागि सरल, व्यवहारिक र छिटो service experience दिने उद्देश्यले तयार गरिएको one-stop business point.</p>
+        </div>
+        <div class="grid">
+          <div class="card"><h3>कसका लागि?</h3><p>Student, home user, office, small business तथा दैनिक document/printing कामका लागि।</p></div>
+          <div class="card"><h3>हाम्रो प्राथमिकता</h3><p>स्पष्ट रेट, छिटो सेवा, सजिलो सम्पर्क र ग्राहकको आवश्यकताअनुसार समाधान।</p></div>
+          <div class="card"><h3>सम्पर्क</h3><p>WhatsApp बाट काम/रेटको जानकारी लिन सकिन्छ: <strong>9802414955</strong></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>सम्पर्क गर्नुहोस्</h2></div>
+          <p>काम पठाउन वा सेवा बारे बुझ्न WhatsApp प्रयोग गर्नुहोस्।</p>
+        </div>
+        <div class="contact">
+          <div class="contactbox">
+            <div class="contact-row"><div>📍</div><div><strong>Location</strong><span>Banepa, Nepal</span></div></div>
+            <div class="contact-row"><div>📞</div><div><strong>Phone / WhatsApp</strong><span>9802414955</span></div></div>
+            <div class="contact-row"><div>🕐</div><div><strong>Opening Hours</strong><span>Sunday–Friday, 7:00 AM–7:00 PM</span></div></div>
+            <div class="contact-row"><div>💬</div><div><strong>Quick Order</strong><span>WhatsApp मा message पठाउनुहोस्।</span></div></div>
+            <div class="actions">
+              <a class="cta" href="https://wa.me/9779802414955" target="_blank">WhatsApp खोल्नुहोस्</a>
+              <a class="btn2" href="tel:+9779802414955">Call गर्नुहोस्</a>
+            </div>
+          </div>
+          <div class="contactbox mapbox">
+            <div>
+              <div style="font-size:46px">📍</div>
+              <h3>Banepa Store</h3>
+              <p style="color:var(--muted);margin-bottom:18px">Google Maps मा exact shop pin जोड्न यो भागमा तपाईंको Maps link राख्न सकिन्छ।</p>
+              <a class="btn2" href="https://www.google.com/maps/search/?api=1&query=Banepa%2C%20Nepal" target="_blank">Google Maps खोल्नुहोस्</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>© <span id="year"></span> Hello Nepal Business Hub. All rights reserved.</div>
+      <div>Banepa • Nepal • WhatsApp 9802414955</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
